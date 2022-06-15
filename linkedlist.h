@@ -23,6 +23,7 @@ public:
     bool getNode(int, Data*); // retrieves the data from a node from a given id
     bool clearList(); // deallocates all nodes and sets head to NULL
     bool exists(int); // tests for the existence of a node based on a given id
+    void printList(boo = false); // prints forward (default) or backward
     int getCount(); // returns count dynamically
     
 private:
