@@ -26,18 +26,21 @@ bool LinkedList::addNode(int id){
     bool flag = false;
     cout << "addNode Test Line " << endl;
     cout << endl;
+    return flag;
 }
 
 bool LinkedList::deleteNode(int id, string* info){
     bool flag = false;
     cout << "deleteNode Test Line " << endl;
     cout << endl;
+    return flag;
 }
 
 bool LinkedList::getNode(int id, Data* info){
     bool flag = false;
     cout << "getNode Test Line " << endl;
     cout << endl;
+    return flag;
 }
 
 void LinkedList::printList(bool direction){
@@ -52,13 +55,15 @@ int LinkedList::getCount(){
 
 bool LinkedList::clearList(){
     cout << "clearList Test Line " << endl;
-       cout << endl;
+    cout << endl;
+    return flag;
 }
 
 bool LinkedList::exists(int id){
     flag = false;
     cout << "exists Test Line " << endl;
     cout << endl;
+    return flag;
 }
 
 // PRIVATE METHODS
