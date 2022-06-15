@@ -1,6 +1,10 @@
 /*
- * your comment header here
- */
+Name: William Hammel
+Linked Lists
+Purpose: : Create a fully functional doubly linked list class
+Create a linked list object from your class.
+Demonstrate complete testing and full functionality of your linked list.
+*/
 
 #include "linkedlist.h"
 
