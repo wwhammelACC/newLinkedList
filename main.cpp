@@ -8,6 +8,7 @@
 
 #include "main.h"
 
+
 int main() {
     //seed the rand function
     srand(time(NULL));
