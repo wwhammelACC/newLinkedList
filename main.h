@@ -16,7 +16,8 @@
 #include "testdata.h"
 #include "linkedlist.h"
 
-using std::cout;
-using std::endl;
+//using std::cout;
+//using std::endl;
 
 #endif /* MAIN_H */
+
