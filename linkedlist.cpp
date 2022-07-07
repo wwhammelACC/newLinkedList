@@ -33,7 +33,7 @@ bool LinkedList::addNode(int id, string *info) {
     return flag;
 }
 
-bool LinkedList::deleteNode(int id, string* info){
+bool LinkedList::deleteNode(int id){
     bool flag = false;
     cout << "deleteNode Test Line " << endl;
     cout << endl;
