@@ -14,8 +14,8 @@ Demonstrate complete testing and full functionality of your linked list.
 * ****************************************
 */
 
-//Constructor
-LinkedList::LinkedList(){
+//constructor
+LinkedList::LinkedList() {
     head = NULL;
 }
 
@@ -26,7 +26,7 @@ LinkedList::~LinkedList(){
 
 // PUBLIC METHODS
 
-bool LinkedList::addNode(int id){
+bool LinkedList::addNode(int id, string *info) {
     bool flag = false;
     cout << "addNode Test Line " << endl;
     cout << endl;
