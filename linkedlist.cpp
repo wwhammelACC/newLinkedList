@@ -53,8 +53,10 @@ void LinkedList::printList(bool direction){
 }
 
 int LinkedList::getCount(){
+    int count = 0;
     cout << "getCount Test Line " << endl;
-       cout << endl;
+    cout << endl;
+    return count;
 }
 
 bool LinkedList::clearList(){
