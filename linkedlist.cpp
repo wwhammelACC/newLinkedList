@@ -60,13 +60,14 @@ int LinkedList::getCount(){
 }
 
 bool LinkedList::clearList(){
+    bool flag = false;
     cout << "clearList Test Line " << endl;
     cout << endl;
     return flag;
 }
 
 bool LinkedList::exists(int id){
-    flag = false;
+    bool flag = false;
     cout << "exists Test Line " << endl;
     cout << endl;
     return flag;
