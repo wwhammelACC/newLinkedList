@@ -30,6 +30,25 @@ bool LinkedList::addNode(int id, string *info) {
     bool flag = false;
     cout << "addNode Test Line " << endl;
     cout << endl;
+    Node *nodeHold, *current; // note is the private methods I use **nodeHold here
+    if (id > 0 && *info != "/0") {
+        cout << "test line after initial condition " << endl;
+        //addHead
+        if (head == NULL || id < head->data.id) { // makes condition to set id at beginning
+            cout << "test line after initial addHead test condition " << endl;
+            if(current == NULL){
+                nodeHold->prev = NULL;
+                nodeHold->next = NULL;
+            }else{
+                nodeHold->prev = NULL;
+                nodeHold->next = current;
+                current->prev = nodeHold;
+            }
+            head = nodeHold;
+            flag = true;
+        }
+    }
+
     return flag;
 }
 
