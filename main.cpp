@@ -8,7 +8,6 @@
 
 #include "main.h"
 
-
 int main() {
     //seed the rand function
     srand(time(NULL));
@@ -85,8 +84,7 @@ int main() {
         }
     }
     cout << endl;
-    
-    
+
     //deleting from the list random ids from the test data
     int delid;
     for (int i = 0; i < numTestData; i++) {
