@@ -28,27 +28,30 @@ LinkedList::~LinkedList(){
 
 bool LinkedList::addNode(int id, string *info) {
     bool flag = false;
-    cout << "addNode Test Line " << endl;
-    cout << endl;
-    Node *nodeHold, *current; // note is the private methods I use **nodeHold here
     if (id > 0 && *info != "/0") {
-        cout << "test line after initial condition " << endl;
-        //addHead
-        if (head == NULL || id < head->data.id) { // makes condition to set id at beginning
-            cout << "test line after initial addHead test condition " << endl;
-            if(current == NULL){
-                nodeHold->prev = NULL;
-                nodeHold->next = NULL;
-            }else{
-                nodeHold->prev = NULL;
-                nodeHold->next = current;
-                current->prev = nodeHold;
-            }
-            head = nodeHold;
+        Node *nodeHold;
+        //Node *nodeHold;
+        if (head == NULL || id < head->data.id) {
+            cout << "initial test line " << endl;
             flag = true;
+        }else{
+            Node *current = head;
+            while (id > current->data.id && current->next != NULL) {
+                current = current->next;
+            }
+            if (id == current->data.id) {
+                flag = false;
+            } else if (id > current->data.id && current->next == NULL) {
+                //addTail(id, info, current, *nodeHold);
+                cout << "addTail test line " << endl;
+                flag = true;
+            } else {
+                //addMiddle(id, info, current, *nodeHold);
+                cout << "addMiddle test line " << endl;
+                flag = true;
+            }
         }
     }
-
     return flag;
 }
 
