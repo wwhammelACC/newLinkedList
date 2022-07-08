@@ -111,7 +111,5 @@ int main() {
     cout << "\tThere are " << list.getCount() << " nodes." << endl;
     list.printList();
     cout << endl;
-
-
     return 0;
 }
