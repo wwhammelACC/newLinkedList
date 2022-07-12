@@ -59,11 +59,17 @@ bool LinkedList::addNode(int id, string *info) {
             } else if (id > current->data.id && current->next == NULL) {
                 //addTail(id, info, current, *nodeHold);
                 cout << "addTail test line " << endl;
-
+                newNode->next = NULL;
+                newNode->prev = current;
+                current->next = newNode;
                 flag = true;
             } else {
                 //addMiddle(id, info, current, *nodeHold);
                 cout << "addMiddle test line " << endl;
+                newNode->next = current;
+                newNode->prev = current->prev;
+                current->prev->next = newNode;
+                current->prev = newNode;
                 flag = true;
             }
         }
