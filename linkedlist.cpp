@@ -31,12 +31,12 @@ bool LinkedList::addNode(int id, string *info) {
     Node *current = head;
     if (id > 0 && *info != "/0") {
         //Node *nodeHold;
+        Node *newNode = new Node;
+        newNode->data.id = id;
+        newNode->data.data = *info;
         if (head == NULL || id < head->data.id) {
             //Node *newNode;
             // eventually replace below with method nodeAllocate
-            Node *newNode = new Node;
-            newNode->data.id = id;
-            newNode->data.data = *info;
             cout << "addHead initial test line " << endl;
             if(current == NULL){
                 newNode->prev = NULL;
@@ -59,6 +59,7 @@ bool LinkedList::addNode(int id, string *info) {
             } else if (id > current->data.id && current->next == NULL) {
                 //addTail(id, info, current, *nodeHold);
                 cout << "addTail test line " << endl;
+
                 flag = true;
             } else {
                 //addMiddle(id, info, current, *nodeHold);
