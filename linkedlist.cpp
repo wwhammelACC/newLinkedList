@@ -28,14 +28,29 @@ LinkedList::~LinkedList(){
 
 bool LinkedList::addNode(int id, string *info) {
     bool flag = false;
+    Node *current = head;
     if (id > 0 && *info != "/0") {
-        Node *nodeHold;
         //Node *nodeHold;
         if (head == NULL || id < head->data.id) {
-            cout << "initial test line " << endl;
+            //Node *newNode;
+            // eventually replace below with method nodeAllocate
+            Node *newNode = new Node;
+            newNode->data.id = id;
+            newNode->data.data = *info;
+            cout << "addHead initial test line " << endl;
+            if(current == NULL){
+                newNode->prev = NULL;
+                newNode->next = NULL;
+            }else
+            {
+                newNode->prev = NULL;
+                newNode->next = current;
+                current->prev = newNode;
+            }
+            head = newNode;
             flag = true;
         }else{
-            Node *current = head;
+            //Node *current = head;
             while (id > current->data.id && current->next != NULL) {
                 current = current->next;
             }
