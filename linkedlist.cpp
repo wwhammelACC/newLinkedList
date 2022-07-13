@@ -80,6 +80,33 @@ bool LinkedList::addNode(int id, string *info) {
 bool LinkedList::deleteNode(int id){
     bool flag = false;
     cout << "deleteNode Test Line " << endl;
+    Node *current = head;
+    // pass this method an id to delete. Return true or false to indicate success or failure.
+    if(id > 0){ // id has to be greater than 0
+        if(head == NULL){ // if head is NULL dont go forward
+            flag = false;
+        }else{
+            while(id != current->data.id && current->next != NULL){
+                current = current->next;
+            }if(id != current->data.id){
+                flag = false;
+                // below setting up delete for last item
+            }else if(id == current->data.id && current->next == NULL && current->prev == NULL){
+                delete current;
+                head = NULL;
+                flag = true;
+            }else if(current->prev == NULL){ // deleting head
+                cout << "deleting head test line " << endl;
+                flag = true;
+            }else if(current->next == NULL){ // deleting tail
+                cout << "deleting tail test line " << endl;
+                flag = true;
+            }else if(id == current->data.id){
+                cout << "deleting middle test line " <<  endl;
+                flag = true;
+            }
+        }
+    }
     cout << endl;
     return flag;
 }
