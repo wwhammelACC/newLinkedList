@@ -103,9 +103,14 @@ bool LinkedList::deleteNode(int id){
                 flag = true;
             }else if(current->next == NULL){ // deleting tail
                 cout << "deleting tail test line " << endl;
+                current->prev->next = NULL;
+                delete current; //Deallocate
                 flag = true;
             }else if(id == current->data.id){
                 cout << "deleting middle test line " <<  endl;
+                current->prev->next = current->next;
+                current->next->prev = current->prev;
+                delete current; //Deallocate
                 flag = true;
             }
         }
