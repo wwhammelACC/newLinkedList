@@ -119,10 +119,28 @@ bool LinkedList::deleteNode(int id){
     return flag;
 }
 
-bool LinkedList::getNode(int id, Data* info){
+bool LinkedList::getNode(int id, Data *info){
     bool flag = false;
     cout << "getNode Test Line " << endl;
-    cout << endl;
+    if(head != NULL){
+        Node *current = head;
+        while(id != current->data.id && current->next != NULL){
+            current = current->next;
+        }
+        if(id == current->data.id){
+            // filling empty data struct
+            cout << "getNode Test Line id found" << endl;
+            info->data = current->data.data; // data is the string
+            info->id = current->data.id; // this is the int id
+            flag = true;
+        }else{
+            // if id is not found fill id w/ -1 and string with ""
+            cout << "getNode Test Line id not found" << endl;
+            info->id = -1;
+            info->data = "";
+            flag = false;
+        }
+    }
     return flag;
 }
 
