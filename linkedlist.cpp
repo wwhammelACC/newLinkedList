@@ -165,10 +165,17 @@ bool LinkedList::clearList(){
     bool flag = false;
     cout << "clearList Test Line " << endl;
     if(head != NULL){
-        
+        Node *current = head;
+        while(current != NULL){
+            head = current->next;
+            delete current;
+            current = head;
+        }
+        head = NULL;
+        flag = true;
     }
-    cout << endl;
     return flag;
+    cout << endl;
 }
 
 bool LinkedList::exists(int id){
