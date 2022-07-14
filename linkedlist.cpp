@@ -150,8 +150,13 @@ void LinkedList::printList(bool direction){
 }
 
 int LinkedList::getCount(){
-    int count = 0;
     cout << "getCount Test Line " << endl;
+    int count = 0;
+    Node *current = head;
+    while(current != NULL){
+        current = current->next; // got to the next node
+        count++;
+    }
     cout << endl;
     return count;
 }
@@ -159,6 +164,9 @@ int LinkedList::getCount(){
 bool LinkedList::clearList(){
     bool flag = false;
     cout << "clearList Test Line " << endl;
+    if(head != NULL){
+        
+    }
     cout << endl;
     return flag;
 }
