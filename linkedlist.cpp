@@ -168,6 +168,7 @@ void LinkedList::printList(bool direction){
         }
         // traverse backwareds
         while(current){
+            cout << "traverse backwards test line " << endl;
             cout << i << ": " << current->data.id << " : " << current->data.data << endl;
             current = current->prev;
             i++;
