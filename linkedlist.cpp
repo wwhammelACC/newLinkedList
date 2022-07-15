@@ -146,6 +146,17 @@ bool LinkedList::getNode(int id, Data *info){
 
 void LinkedList::printList(bool direction){
     cout << "printList Test Line " << endl;
+    Node *current = head;
+    if(direction == false){
+        cout << "traverse forward test line " << endl;
+        int i = 1;
+        while(current != NULL){
+            cout << i << ": " << current->data.id << " : " << current->data.data << endl;
+            current = current->next; // go to next node
+            i++;
+        }
+    }
+
     cout << endl;
 }
 
