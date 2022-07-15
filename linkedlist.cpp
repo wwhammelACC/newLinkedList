@@ -155,8 +155,24 @@ void LinkedList::printList(bool direction){
             current = current->next; // go to next node
             i++;
         }
+    }else{
+        current = head; // start a "tracking" pointer by pointing it head
+        int i = 1;
+        bool tail = false;
+        while(current && !tail){ //find the tail
+            if(current->next) {
+                current = current->next;
+            }else{
+                tail = true; // found the tail
+            }
+        }
+        // traverse backwareds
+        while(current){
+            cout << i << ": " << current->data.id << " : " << current->data.data << endl;
+            current = current->prev;
+            i++;
+        }
     }
-
     cout << endl;
 }
 
